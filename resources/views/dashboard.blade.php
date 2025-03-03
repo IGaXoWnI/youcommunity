@@ -50,16 +50,7 @@
         <p class="text-gray-300 max-w-2xl text-lg">Explore curated experiences tailored to your refined tastes and preferences.</p>
     </div>
     
-    <!-- Overlay decorative element -->
-    <div class="absolute right-0 top-0 w-1/3 h-full opacity-10">
-        <svg viewBox="0 0 200 800" xmlns="http://www.w3.org/2000/svg">
-            <path d="M30,200 Q80,100 150,250 T300,300 Q400,500 100,700" stroke="#b48c42" stroke-width="2" fill="none"/>
-            <circle cx="30" cy="200" r="4" fill="#b48c42"/>
-            <circle cx="150" cy="250" r="4" fill="#b48c42"/>
-            <circle cx="300" cy="300" r="4" fill="#b48c42"/>
-            <circle cx="100" cy="700" r="4" fill="#b48c42"/>
-        </svg>
-    </div>
+    
 </div>
 
 <!-- Search and Filters Section -->
@@ -78,64 +69,25 @@
                 <input type="text" class="block w-full pl-10 pr-3 py-3 border-0 ring-1 ring-gray-300 bg-white/50 text-gray-900 placeholder-gray-500 focus:ring-2 focus:ring-amber-300 rounded-xl" placeholder="Search events, locations, or categories...">
             </div>
             
-            <!-- Filters -->
-            <div class="flex space-x-2">
-                <button class="filter-button flex items-center space-x-2 px-4 py-3 text-gray-700 bg-white ring-1 ring-gray-300 rounded-xl hover:bg-gray-50 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                    <span>Date</span>
-                </button>
-                
-                <button class="filter-button flex items-center space-x-2 px-4 py-3 text-gray-700 bg-white ring-1 ring-gray-300 rounded-xl hover:bg-gray-50 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                    <span>Location</span>
-                </button>
-                
-                <button class="filter-button flex items-center space-x-2 px-4 py-3 text-gray-700 bg-white ring-1 ring-gray-300 rounded-xl hover:bg-gray-50 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z" />
-                    </svg>
-                    <span>Filters</span>
-                </button>
-                
-                <button class="filter-button flex items-center space-x-2 px-4 py-3 text-white bg-gray-900 rounded-xl hover:bg-gray-800 transition-colors">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4m0 0L9 7" />
-                    </svg>
-                    <span>Map View</span>
-                </button>
-            </div>
+            
         </div>
         
-        <!-- Active filters -->
-        <div class="flex flex-wrap gap-2 mt-3">
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs bg-amber-100 text-amber-800">
-                This Weekend
-                <button class="ml-1 text-amber-600 hover:text-amber-900">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </span>
-            <span class="inline-flex items-center px-3 py-1 rounded-full text-xs bg-amber-100 text-amber-800">
-                Within 5km
-                <button class="ml-1 text-amber-600 hover:text-amber-900">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                    </svg>
-                </button>
-            </span>
-        </div>
+        
     </div>
 </div>
 
 <!-- Main content -->
 <div class="bg-gray-50 min-h-screen">
     <div class="mx-auto max-w-7xl px-6 py-12">
+        <!-- Add this button above the events grid -->
+        <div class="flex justify-end mb-4">
+            <form action="{{ route('events.create') }}" method="GET">
+                <button type="submit" class="inline-flex items-center px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700">
+                    Add Event
+                </button>
+            </form>
+        </div>
+
         <!-- Section heading -->
         <div class="flex justify-between items-center mb-10">
             <div>
@@ -161,19 +113,6 @@
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             @foreach($events as $event)
             <a href="{{ route('events.show', $event) }}" class="event-card group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-lg transition-shadow duration-300">
-                <div class="relative">
-                    <img src="{{ $event->image_url }}" alt="{{ $event->title }}" class="w-full h-56 object-cover">
-                    <div class="absolute top-4 right-4">
-                        <button class="p-2 bg-white rounded-full shadow-md hover:bg-gray-100 transition-colors bookmark-button">
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-amber-600" fill="currentColor" viewBox="0 0 24 24" stroke="currentColor">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 5a2 2 0 012-2h10a2 2 0 012 2v16l-7-3.5L5 21V5z" />
-                            </svg>
-                        </button>
-                    </div>
-                    <div class="absolute bottom-4 left-4">
-                        <span class="px-3 py-1 bg-amber-500 text-white text-xs uppercase tracking-wider rounded-full">{{ $event->category }}</span>
-                    </div>
-                </div>
                 <div class="p-6">
                     <div class="flex justify-between items-start mb-2">
                         <h3 class="font-serif text-xl font-medium text-gray-900 group-hover:text-amber-600 transition-colors">{{ $event->title }}</h3>
@@ -194,7 +133,9 @@
                                 <div class="w-{{ $event->spots_left_percentage }} h-1 bg-amber-500 rounded-full"></div>
                             </div>
                         </div>
-                        <button class="px-4 py-2 bg-gray-900 text-white text-sm rounded-lg hover:bg-gray-800 transition-colors">RSVP</button>
+                        <form action="{{ route('events.show', $event) }}" method="GET">
+                            <button type="submit" class="px-4 py-2 bg-gray-900 text-white text-sm rounded-lg hover:bg-gray-800 transition-colors">See Details</button>
+                        </form>
                     </div>
                 </div>
             </a>
@@ -202,24 +143,8 @@
         </div>
         
         <!-- Pagination -->
-        <div class="mt-8 flex justify-center">
-            <nav class="flex items-center space-x-2">
-                <button class="p-2 rounded-lg border border-gray-300 text-gray-500 hover:bg-gray-50">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
-                    </svg>
-                </button>
-                <button class="px-4 py-2 rounded-lg bg-amber-500 text-white">1</button>
-                <button class="px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50">2</button>
-                <button class="px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50">3</button>
-                <span class="px-4 py-2 text-gray-500">...</span>
-                <button class="px-4 py-2 rounded-lg text-gray-700 hover:bg-gray-50">12</button>
-                <button class="p-2 rounded-lg border border-gray-300 text-gray-500 hover:bg-gray-50">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
-                    </svg>
-                </button>
-            </nav>
+        <div class="mt-2 flex justify-center">
+            {{ $events->links('vendor.pagination.custom') }}
         </div>
     </div>
 </div>

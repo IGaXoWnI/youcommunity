@@ -9,7 +9,7 @@ class EventController extends Controller
 {
     public function index()
     {
-        $events = Event::all(); // Fetch all events
+        $events = Event::paginate(3); // Fetch 3 events per page
         return view('dashboard', compact('events')); // Pass events to the view
     }
 
@@ -20,6 +20,7 @@ class EventController extends Controller
         if (!$event) {
             abort(404); 
         }
+        // dd($event);
 
         return view('events.show', compact('event')); 
     }
@@ -27,22 +28,44 @@ class EventController extends Controller
    
     public function create()
     {
-        return view('events.create');
+        return view('events.create'); // Return the view for creating an event
     }
 
    
     public function store(Request $request)
     {
-    
-        $request->validate([
-            'title' => 'required',
-            'description' => 'required',
+        // dd($request->all());
+
+        $validatedData = $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
             'date' => 'required|date',
+            'location' => 'required|string|max:255',
         ]);
 
-        
-        Event::create($request->all());
+        Event::create($validatedData);
 
-        return redirect()->route('events.index')->with('success', 'Event created successfully!');
+        return redirect()->route('dashboard')->with('success', 'Event created successfully!');
+    }
+
+    public function edit($id)
+    {
+        $event = Event::findOrFail($id);
+        return view('events.edit', compact('event')); // Return the view for editing an event
+    }
+
+    public function update(Request $request, $id)
+    {
+        $validatedData = $request->validate([
+            'title' => 'required|string|max:255',
+            'description' => 'required|string',
+            'date' => 'required|date',
+            'location' => 'required|string|max:255',
+        ]);
+
+        $event = Event::findOrFail($id);
+        $event->update($validatedData);
+
+        return redirect()->route('events.show', $event)->with('success', 'Event updated successfully!');
     }
 }

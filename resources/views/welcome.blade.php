@@ -8,7 +8,7 @@
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
 <body class="bg-gradient-to-r from-teal-400 to-blue-500">
-    <header class="bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-lg">
+        <header class="bg-gradient-to-r from-purple-600 to-pink-500 text-white shadow-lg">
         <nav class="container mx-auto flex justify-between items-center p-4">
             <h1 class="text-3xl font-bold">YouCommunity</h1>
             <ul class="flex space-x-6">

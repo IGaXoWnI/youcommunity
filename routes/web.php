@@ -16,7 +16,8 @@ Route::middleware(['auth'])->group(function () {
 
 Route::resource('events', EventController::class); 
 
-Route::post('events/{event}/rsvp', [RsvpController::class, 'store'])->name('rsvps.store');
+Route::post('events/{event}/rsvp', [RsvpController::class, 'store'])->name('events.rsvp');
+Route::delete('events/{event}/rsvp', [RsvpController::class, 'destroy'])->name('events.rsvp.destroy');
 
 Route::post('events/{event}/comments', [CommentController::class, 'store'])->name('comments.store');
 Route::delete('comments/{comment}', [CommentController::class, 'destroy'])->name('events.comments.destroy');

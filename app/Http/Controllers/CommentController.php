@@ -11,14 +11,18 @@ class CommentController extends Controller
     public function store(Request $request, $eventId)
     {
         $request->validate([
-            'contenu' => 'required|string|max:1000',
+            'content' => 'required|string|max:1000',
         ]);
+
+        // Debugging line to check incoming request data
+
 
         Comment::create([
             'event_id' => $eventId,
             'user_id' => $request->user()->id,
-            'contenu' => $request->contenu,
+            'content' => $request->content,
         ]);
+        
 
         return back()->with('success', 'Comment added!');
     }
