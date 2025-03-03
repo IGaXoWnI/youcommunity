@@ -9,14 +9,18 @@ class EventController extends Controller
 {
     public function index()
     {
-        $events = Event::all(); 
-        return view('events.index', compact('events')); 
+        $events = Event::all(); // Fetch all events
+        return view('dashboard', compact('events')); // Pass events to the view
     }
 
    
     public function show($id)
     {
-        $event = Event::find($id); 
+        $event = Event::with(['rsvps', 'comments'])->find($id); 
+        if (!$event) {
+            abort(404); 
+        }
+
         return view('events.show', compact('event')); 
     }
 

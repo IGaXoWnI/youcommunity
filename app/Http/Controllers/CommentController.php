@@ -10,12 +10,14 @@ class CommentController extends Controller
 {
     public function store(Request $request, $eventId)
     {
-        $event = Event::find($eventId);
+        $request->validate([
+            'contenu' => 'required|string|max:1000',
+        ]);
 
         Comment::create([
-            'event_id' => $event->id,
+            'event_id' => $eventId,
             'user_id' => $request->user()->id,
-            'content' => $request->content,
+            'contenu' => $request->contenu,
         ]);
 
         return back()->with('success', 'Comment added!');

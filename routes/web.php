@@ -10,15 +10,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth', 'verified'])->name('dashboard');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/dashboard', [EventController::class, 'index'])->name('dashboard');
+});
 
 Route::resource('events', EventController::class); 
 
-Route::post('events/{event}/rsvp', [RsvpController::class, 'store'])->name('events.rsvp');
+Route::post('events/{event}/rsvp', [RsvpController::class, 'store'])->name('rsvps.store');
 
-Route::post('events/{event}/comments', [CommentController::class, 'store'])->name('events.comments.store');
+Route::post('events/{event}/comments', [CommentController::class, 'store'])->name('comments.store');
 Route::delete('comments/{comment}', [CommentController::class, 'destroy'])->name('events.comments.destroy');
 
 Route::middleware('auth')->group(function () {

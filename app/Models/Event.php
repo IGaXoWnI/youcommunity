@@ -22,6 +22,11 @@ class Event extends Model
         return $this->belongsToMany(User::class, 'rsvps')->withTimestamps();
     }
 
+    public function rsvps()
+    {
+        return $this->hasMany(Rsvp::class);
+    }
+
     public function comments()
     {
         return $this->hasMany(Comment::class);

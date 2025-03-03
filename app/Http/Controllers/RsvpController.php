@@ -10,6 +10,10 @@ class RsvpController extends Controller
 {
     public function store(Request $request, $eventId)
     {
+        $request->validate([
+            'event_id' => 'required|exists:events,id',
+        ]);
+
         $event = Event::find($eventId);
 
         Rsvp::create([
@@ -17,6 +21,6 @@ class RsvpController extends Controller
             'user_id' => $request->user()->id,
         ]);
 
-        return back()->with('success', 'You have RSVP’d to the event!');
+        return back()->with('success', 'RSVP added successfully!');
     }
 }
